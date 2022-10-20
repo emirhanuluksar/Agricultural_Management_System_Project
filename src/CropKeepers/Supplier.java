@@ -182,40 +182,6 @@ public class Supplier implements ICropKeeper {
             }
         }
         System.out.println("Satın alım gerçekleştirilemedi eksik veya hatalı bilgi girdisi!");
-
-        /**
-         * Alınmak istenen ürünün alınmak istenen mağazanın listesinde olup olmadığı kontrol edilir.
-         * Eğer ürün mağaza listesinde varsa aşağıdaki işlemler uygulanır.
-         * Alınmak istenen kilo kadar ürünün olup olmadığı kontrol edilir.
-         * alınmak istenen kilo ile ürünün fiyatı çarpılır.
-         * eğer alıcının bütçesi yeterliyse şu işlemler yapılır.
-         * eğer mağazadaki ürünün bir kısmı alınacaksa
-         * alıcının listesinde o ürünle aynı isimde ürün olup olmadığı kontrol edilir eğer varsa şu işlemler yapılır.
-         * alıcının listesindeki kilo miktarı bir değişkene atanır ve alınmak istenen kilo ile toplanır ardından yeni kilo olarak set edilir.
-         * mağazada bulunan ürünün kilosu bir değişkene atanır ve alınan kilodan çıkartılır ve ardından yeni kilo olarak set edilir kullanılan kapasite azaltılır boş alan arttırılır.
-         * son olarak tedarikçinin bütçesinden ürünün fiyatı ile kilosunun çarpımı çıkarılır ve ardından yeni bütçe olarak tedarikçinin bütçesine set edilir.
-         * eğer alıcının listesinde alınmak istenen ürün ile aynı isimde ürün yoksa şu işlemler yapılır
-         * yeni bir crop nesnesi oluşturulur bu crop nesnesine ürünün adı ürünün tipi kilosu tadı idsi tedarikçinin idsi ile aynı ve fiyatı olan bir nesne oluşturucaz
-         * ardından tedarikçinin listesine eklenir.
-         * mağazada bulunan ürünün kilosu bir değişkene atanır ve alınmak istenen kilo ile çıkartılır ardından yeni kilo olarak set edilir kullanılan kapasite azaltılır boş alan arttırılır.
-         *
-         *
-         *
-         * Alınmak istenen ürünün alınmak istenen mağazanın listesinde olup olmadığı kontrol edilir.
-         * Eğer ürün mağaza listesinde varsa aşağıdaki işlemler uygulanır.
-         * Alınmak istenen kilo kadar ürünün olup olmadığı kontrol edilir.
-         * alınmak istenen kilo ile ürünün fiyatı çarpılır.
-         * eğer alıcının bütçesi yeterliyse şu işlemler yapılır.
-         * eğer mağazada bulunan ürünün tamamı alınacaksa
-         * alıcının listesinde o ürünle aynı ismde ürün olup olmadığı kontrol edilir eğer varsa şu işlemler yapılır.
-         * alıcının listesindeki kilo miktarı bir değişkene atanır ve alınmak istenen kilo ile toplanır ardından yeni kilo olarak set edilir.
-         * mağazadaki ürün ise tamamen kaldırılır ve kullanılan kapasite azaltılır boş alan arttırılır.
-         * son olarak tedarikçinin bütçesinden ürünün fiyatı ile kilosunun çarpımı çıkarılır ve ardından yeni bütçe olarak tedarikçinin bütçesine set edilir.
-         * eğer alıcının listesinde alınmak istenen ürün ile aynı isimde ürün yoksa şu işlemler yapılır.
-         * yeni bir crop nesnesi oluşturulur bu crop nesnesine ürünün adı ürünün tipi kilosu tadı idsi tedarikçinin idsi ile aynı ve fiyatı olan bir nesne oluşturucaz.
-         * ardından tedarikçinin listesine eklicez.
-         * mağazada bulunan ürün tamamen kaldırılır kullanılan kapasite azaltılır boş alan arttırılır.
-         * **/
     }
 
     public void sellCrop(Store store, String urunad, int urunkilo) {
@@ -360,33 +326,6 @@ public class Supplier implements ICropKeeper {
             }
         }
         System.out.println("Satış işlemi gerçekleştirilemedi ürün bilgilerine dikkat edin");
-
-
-        /** Tedarikçiden ürün satıcaz
-         * Satılmak istenen ürünün satılmak istenenen satıcıda olup olmadığı kontrol edilir.
-         * Eğer ürün satıcı listesinde varsa aşağıdaki işlemler uygulanır.
-         * Satılmak istenen kilo kadar ürünün olup olmadığı kontrol edilir.
-         * satılmak istenen kilo ile ürünün fiyatı çarpılır.
-         * satılmak istenen ürünün bir kısmı satılacaksa
-         * mağazanın listesinde o ürünle aynı isimde ürün olup olmadığı kontrol edilir eğer varsa şu işlemler yapılır.
-         * alınacak olan ürünün mağazada kaplayacağı alan hesaplanır mağazada kaplayacağı alan eğer max kapasiteden büyükse ürün eklenmez eğer max kapasiteden azsa ürün eklenir.
-         * mağazaya eklenecek ürünün mağazada kaplayacağı alan max kapasiteden azsa şu işlemler yapılır.
-         * Satıcının listesindeki kilo miktarı bir değişkene atanır ve satılmak istenen kilo ile çıkarılır ardından yeni kilo olarak set edilir.
-         * mağazada bulunan ürünün kilosu bir değişkene atanır ve eklenecek kilo ile toplanır ve ardından yeni kilo olarak set edilir kullanılan kapasite arttırılır boş alan azaltılır.
-         * son olarak tedarikçinin bütçesine ürünün fiyatı ile kilosu çarpılır ardından yeni bütçe olarak tedarikçinin bütçesine set edilir.
-         * eğer mağazanın listesinde o ürünle aynı isimde ürün yoksa şu işlemler yapılır.
-         * mağazaya eklenecek ürünün ne kadar yer kaplayacağı hesaplanır max kapasiteden büyükse eklenmez küçükse eklenir
-         * mağazaya eklenecek ürünün mağazada kaplayacağı alan max kapasiteden azsa şu işlemler yapılır
-         * yeni bir fruit nesnesi oluşturulur bu fruit nesnesine ürünün adı ürünün tipi kilosu tadı idsi mağazanın idsi ile aynı ve fiyatı olan bir nesne oluşturucaz
-         * ardından mağazanın listesine eklicez
-         * mağazanın kullanılan kapasitesi arttırılır boş alan azaltılır.
-         * son olarak satıcının bütçesine ürünün fiyatı ile satılan kilosu çarpılır ve ardından yeni bütçe olarak satıcının bütçesine set edilir.
-         * satıcıda bulunan ürünün kilosu bir değişkene atanır ve satılmak istenen kilo ile çıkarılır ardından yeni kilo olarak set edilir.
-         *
-         *
-         *
-         *
-         * **/
     }
 
     @Override
